@@ -51,3 +51,17 @@ print(my_str.find(sub_str))
 print(my_str.find(sub_str, 4, 20))
 print(my_str.find(my_str, 12, 21))
 print(my_str.index(my_str, 12, 21))
+
+#%% format() - podemos añadir diversas opciones de formato en los str con format()
+
+txt1 = "My name is {fname}, I'm {age}".format(fname = "John", age = 36)
+txt2 = "My name is {0}, I'm {1}".format("John",36)
+txt3 = "My name is {1}, I'm {0}".format(36, "John")
+txt4 = "My name is {}, I'm {}".format("John",36)    # importa el orden de variables
+
+print(txt1)
+print(txt2)
+print(txt3)
+print(txt4)
+
+# Continuamos opciones de format en string_format.py
