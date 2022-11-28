@@ -53,10 +53,28 @@ for char in my_new_str:
 
 print("Longitud del str (sin espacios):", caracteres)
 
-# Ej. Descartar de un string una serie de caracteres -> @ # / 
+#%% Ej. Descartar de un string una serie de caracteres -> @ # / 
 chars_a_descartar = ["@", "#", "/"]
+chars_aceptados = ["a", "b", "c"] # listado de alfabeto + 
+                                  # dígitos + 
+                                  # caracteres especiales válidos: _ - , etc.
 my_str = "Este stri#ng ti@ene cara//cteres incorrectos@#/."
 
+# 1. Ignoramos chars en chars_a_descartar
+caracteres = 0
+for char in my_str:
+    if char not in chars_a_descartar:
+        caracteres += 1
+print(f"El str tiene {len(my_str)} caracteres en total y {caracteres} caracteres válidos.")
 
-
+# 2. Limpiamos el str en una copia del str
+my_new_str = ""
+caracteres = 0
+for char in my_str:
+    if char not in chars_a_descartar:
+        my_new_str += char
+        caracteres += 1
+print(f"Longitud total del str es {len(my_str)} y caracteres válidos: {caracteres}.")
+print("String original:", my_str)
+print("Nuevo string:", my_new_str)
 # %%
