@@ -24,4 +24,52 @@ my_str = """
     Donde queremos acortar la primera oración, la segunda.
     Y, la última.
 """
+# Sabiendo que cada OS (Windows, Mac, o Linux)
+# salta línea en strings así:
+UNIX_NEWLINE = '\n'
+WINDOWS_NEWLINE = '\r\n'
+MAC_NEWLINE = '\r'
 
+chars_saltos_de_linea = ['\n', '\r\n', '\r']
+oracion = ""
+oraciones = []
+i = 0
+char = my_str[i]
+
+while(char != "." and i < len(my_str) - 1):
+    if char not in chars_saltos_de_linea:
+        oracion += char
+    i += 1
+    char = my_str[i]
+
+print("oracion:", oracion)
+
+# Limpiamos los espacios del medio de la oración
+oracion_sin_espacios_iniciales = oracion[4:]
+print(oracion[4:].find("    "))
+print(oracion_sin_espacios_iniciales[:26], oracion_sin_espacios_iniciales[30:])
+oracion_final = oracion_sin_espacios_iniciales[:26] + " " + oracion_sin_espacios_iniciales[30:]
+print(oracion_final)
+
+#%% Buscamos puntos para saber donde están las oraciones
+i = 0
+c = my_str[i]
+puntos = [] # 0, 1, 2 
+
+while (i < len(my_str) - 1):
+    if(c == '.'):
+        puntos.append(i)
+    i += 1
+    c = my_str[i]
+
+print("Índices de los puntos:", puntos)
+
+oracion1 = my_str[4:puntos[0]+1]
+oracion2 = my_str[puntos[0]+1:puntos[1]+1]
+oracion3 = my_str[puntos[1]+1:puntos[2]+1]
+
+print(oracion1)
+print(oracion2)
+print(oracion3)
+
+# %%
