@@ -28,3 +28,26 @@ print(txt.encode(encoding="ascii", errors="namereplace"))
 print(txt.encode(encoding="ascii", errors="replace"))
 print(txt.encode(encoding="ascii", errors="xmlcharrefreplace"))
 print(txt.encode(encoding="ascii", errors="strict"))
+
+#%% endswith() - devuelve boolean verificando si str acaba en substr
+my_str = "Hola, me llamo César."
+print(my_str.endswith("César."))
+print(my_str.endswith("César"))
+print(my_str.endswith("César.", 4, 21))
+print(my_str.endswith("César.", 4, 20))
+#%% expandtabs() - cambia el valor de espacios para \t
+txt = "H\to\tl\ta\t!"
+print(txt)
+print(txt.expandtabs())
+print(txt.expandtabs(2))
+print(txt.expandtabs(4))
+print(txt.expandtabs(10))
+
+#%% find() - primera ocurrencia de un substr
+my_str = "Hola, estudio Python."
+sub_str = "estudio"
+
+print(my_str.find(sub_str))
+print(my_str.find(sub_str, 4, 20))
+print(my_str.find(my_str, 12, 21))
+print(my_str.index(my_str, 12, 21))
