@@ -77,4 +77,22 @@ for char in my_str:
 print(f"Longitud total del str es {len(my_str)} y caracteres válidos: {caracteres}.")
 print("String original:", my_str)
 print("Nuevo string:", my_new_str)
+#%% Substrings en strings
+
+my_str = "Programar en Python3 mola!"
+my_sub_str = "Python3"
+
+print(my_sub_str in my_str)
+
+# Ejemplo para comprobar substrings en str
+asunto = "Este mail es para pepe"
+
+if "Pepe" or "pepe" in asunto:
+    print("Pepe ha recibido email:", True)
+else: 
+    print("Pepe no ha recibido emails.")
+
+if "Juan" not in asunto:
+    print("Juan no ha recibido emails")
+
 # %%
