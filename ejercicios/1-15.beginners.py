@@ -130,3 +130,17 @@ def combinar_listas(list1, list2):
     return new_lst
 
 print(combinar_listas(list1, list2))
+
+#%% 11 - Inversión de num
+
+def invertir_num(num):
+    my_str = str(num)
+    new_str = ""
+    idx = len(my_str) - 1
+    while idx >= 0:
+        new_str += my_str[idx] + " "
+        idx -= 1
+    return new_str
+
+print(invertir_num(7536))
+print(invertir_num(1005))
