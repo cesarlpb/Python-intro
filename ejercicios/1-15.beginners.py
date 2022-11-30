@@ -80,6 +80,33 @@ contar_substr(my_str, "Emma")
 
 for i in range(1, 6):
     fila = ""
-    for j in range(1,i+1):
+    # nos sirven los rangos
+    # 0,i -> 0,1 o 0,1,2...
+    # 1,i+1 -> 1,2 o 1,2,3... 
+    for j in range(0,i):
         fila += str(i) + " "
     print(fila)
+#%% 9 - Palíndromo
+
+my_str = "Anna"
+my_str2 = "129"
+        #012 n -> 3
+        # idx -> n-idx-1
+        # 0 -> 3 - 0 - 1 = 2
+my_str3 = "1231"
+my_str4 = "qwertytrewq"
+
+def is_palindrome(string):
+    idx = 0
+    n = len(string)
+    lower_str = string.lower()
+    while idx < n // 2:
+        if not lower_str[idx] == lower_str[n-idx-1]: 
+            return False
+        idx += 1
+    return True
+
+print(my_str, is_palindrome(my_str))
+print(my_str2, is_palindrome(my_str2))
+print(my_str3, is_palindrome(my_str3))
+print(my_str4, is_palindrome(my_str4))
