@@ -191,14 +191,15 @@ print(crear_tabla(20))
 
 #%% 14 - Triángulo de chars
 
-def dibujar_triangulo(num):
+def dibujar_triangulo(num, char):
     idx = num
     triangulo = ""
     while idx > 0:
-        linea = "".ljust(idx, "+").replace("+", "* ")
+        linea = "".ljust(idx, "+").replace("+", f"{char} ")
         triangulo += linea + '\n'
         idx -= 1
     return triangulo
 
-print(dibujar_triangulo(5))
-print(dibujar_triangulo(10))
+print(dibujar_triangulo(5, "*"))
+print(dibujar_triangulo(10, "o"))
+
