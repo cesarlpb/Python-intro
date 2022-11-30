@@ -1,6 +1,9 @@
 # Basado en https://pynative.com/python-basic-exercise-for-beginners/
 
 #%% 1 - Prod y suma de dos números
+from hashlib import algorithms_available
+
+
 def prod(a, b):
     return a * b
 

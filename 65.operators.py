@@ -44,7 +44,28 @@ print(f"#1 \t NOT #1".ljust(espacio))
 print(f"{my_bool1}\t| {not my_bool1}".ljust(espacio))
 print(f"{not my_bool1}\t| {my_bool1}".ljust(espacio))
 #%% Identity operators
+list1 = [1, 2, 3]
+list2 = list1
+list3 = [1, 2, 3]
 
+print("Igualdades:")
+# Igualdades
+print("Lista 1 == 2:", list1 == list2)
+print("Lista 2 == 3:", list2 == list3)
+print("Lista 1 == 3:", list1 == list3)
+
+print("\nis / is not")
+# Operador is
+print("Lista 1 is 2:", list1 is list2) # True
+print("Lista 1 is 3:", list1 is list3) # False
+
+# is not
+print("Lista 1 is not 3:", list1 is not list3) # True
 #%% Membership operators
+lst = [1, 2, 3]
+print("in / not in")
+print("1 in lista:", 1 in lst)
+print("10 in lista:", 10 in lst)
+print("10 not in lista:", 10 not in lst)
 
 #%% Bitwise operators
