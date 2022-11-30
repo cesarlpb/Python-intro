@@ -188,3 +188,17 @@ def crear_tabla(num):
 
 print(crear_tabla(10))
 print(crear_tabla(20))
+
+#%% 14 - Triángulo de chars
+
+def dibujar_triangulo(num):
+    idx = num
+    triangulo = ""
+    while idx > 0:
+        linea = "".ljust(idx, "+").replace("+", "* ")
+        triangulo += linea + '\n'
+        idx -= 1
+    return triangulo
+
+print(dibujar_triangulo(5))
+print(dibujar_triangulo(10))
