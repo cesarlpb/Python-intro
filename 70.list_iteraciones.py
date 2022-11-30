@@ -43,9 +43,30 @@ list = [1, 3, 5, 7, 9]
 for idx, valor in enumerate(list):
 	print (f"({idx}, {valor})", end="\n")
 
-#%% Iteración en reversa
+#%% Iteración en orden inverso con for y reversed
 list = [1, 3, 5, 7, 9]
-
 for i in reversed(list):
     print(i, end=" ")
 
+#%% Orden inverso con range y step -1
+list = [1, 3, 5, 7, 9]
+
+for index in range(len(list) - 1, -1, -1):
+    print(list[index], end=" ")
+
+#%% while
+list = [1, 3, 5, 7, 9]
+
+idx = len(list) - 1
+while idx >= 0:
+    print(list[idx], end=" ")
+    idx -= 1
+#%% list comprehension + slicing con ::-1
+list = [1, 3, 5, 7, 9]
+
+[el for el in list[::-1]] 
+# Nota: con print sale None
+# En el primer el se pueden colocar operaciones
+
+#%% List comprehension y reversed
+[el for el in reversed(list)]
