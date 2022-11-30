@@ -172,3 +172,19 @@ def calc_taxes(num):
 print(calc_taxes(9999))
 print(calc_taxes(15000))
 print(calc_taxes(45000))
+
+#%% 13 - Tabla de multiplicar
+
+def crear_tabla(num):
+    tabla = ""
+    for i in range(1, num + 1):
+        fila = ""
+        for j in range(1, num + 1):
+            fila += str(i * j) + "\t"
+        fila = fila.expandtabs(num // 3) # 3 para num=10 y 5 para num=20
+        fila = fila.ljust(num * 5)       # 30 chars para 10 y 105 para 20
+        tabla += fila + '\n'
+    return tabla
+
+print(crear_tabla(10))
+print(crear_tabla(20))
