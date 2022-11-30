@@ -59,3 +59,27 @@ numbers_y = [75, 65, 35, 75, 30]
 
 print(check_list(numbers_x))
 print(check_list(numbers_y))
+
+#%% 6 - Print múltiplos de 5
+
+nums = [10, 20, 33, 46, 55]
+
+for num in nums:
+    if num % 5 == 0:
+        print(num)
+
+#%% 7 - Cuenta de substr en str
+
+def contar_substr(string, substr):
+    return string.count(substr)
+
+my_str = "Emma is good developer. Emma is a writer"
+contar_substr(my_str, "Emma")
+
+#%% 8 Escribimos triángulo de números
+
+for i in range(1, 6):
+    fila = ""
+    for j in range(1,i+1):
+        fila += str(i) + " "
+    print(fila)
