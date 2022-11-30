@@ -203,3 +203,12 @@ def dibujar_triangulo(num, char):
 print(dibujar_triangulo(5, "*"))
 print(dibujar_triangulo(10, "o"))
 
+#%% 15 - Calcular exponencial
+
+def calc_exp(base, exp):
+    return base ** exp
+
+print(calc_exp(10, 2))  # 100
+print(calc_exp(0, 0))   # 1
+print(calc_exp(10, -2)) # 0.01
+print(calc_exp(10, 6)) # 0.01
