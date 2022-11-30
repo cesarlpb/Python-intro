@@ -110,3 +110,23 @@ print(my_str, is_palindrome(my_str))
 print(my_str2, is_palindrome(my_str2))
 print(my_str3, is_palindrome(my_str3))
 print(my_str4, is_palindrome(my_str4))
+
+#%% 10 Mezclar listas números par / impar
+
+list1 = [10, 20, 25, 30, 35]
+list2 = [40, 45, 60, 75, 90]
+
+# suponemos que son listas del mismo tamaño
+def combinar_listas(list1, list2):
+    idx = 0
+    new_lst = []
+    while idx < len(list1):
+        if list1[idx] % 2 != 0:
+            new_lst.append(list1[idx])
+        if list2[idx] % 2 == 0:
+            new_lst.append(list2[idx])
+        idx += 1
+    new_lst.sort()
+    return new_lst
+
+print(combinar_listas(list1, list2))
